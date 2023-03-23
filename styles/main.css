@@ -1334,6 +1334,81 @@ header .navbar .nav-links .mega-one:hover .megamenu {
   width: 100%;
 }
 
+.acc-benefits {
+  padding: 50px 0;
+}
+.acc-benefits .hexa-grid .hexa-box:nth-child(even) {
+  margin-top: -106px;
+}
+.acc-benefits .hexa-grid {
+  display: none;
+  position: relative;
+  padding-top: 230px;
+  padding-bottom: 100px;
+  max-width: 1000px;
+  border: 1px solid white;
+  margin: auto;
+}
+.acc-benefits .hexa-grid .hexa-box {
+  margin: 0 auto;
+  background-color: dodgerblue;
+  border-radius: 10px;
+  width: 153px;
+  height: 93px;
+  box-sizing: border-box;
+  transition: all 1s;
+  border: 0.4vh solid transparent;
+  position: relative;
+  transform: rotate(30deg);
+}
+.acc-benefits .hexa-grid .hexa-box h3 {
+  color: white;
+  position: absolute;
+  z-index: 9;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-30deg);
+  text-align: center;
+  width: 100%;
+}
+.acc-benefits .hexa-grid .hexa-box::before, .acc-benefits .hexa-grid .hexa-box::after {
+  content: "";
+  border: inherit;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: dodgerblue;
+  border-radius: inherit;
+  height: 100%;
+  width: 100%;
+}
+.acc-benefits .hexa-grid .hexa-box::before {
+  transform: rotate(60deg);
+}
+.acc-benefits .hexa-grid .hexa-box::after {
+  transform: rotate(-60deg);
+}
+.acc-benefits .hexa-grid2 {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10px;
+  height: 355px;
+  padding: 100px 0;
+  max-width: 1000px;
+  margin: auto;
+}
+.acc-benefits .hexa-grid2 .hexa-box2 h3 {
+  color: white;
+  background: url(../img/hexa.png);
+  padding: 37% 0;
+  background-size: cover;
+  text-align: center;
+}
+.acc-benefits .hexa-grid2 .hexa-box2:nth-child(even) {
+  margin-top: -70px;
+  margin-bottom: 70px;
+}
+
 .mission {
   padding: 50px 0;
 }
@@ -1439,13 +1514,42 @@ header .navbar .nav-links .mega-one:hover .megamenu {
 
 .faq {
   padding: 30px;
+  background: rgb(4, 212, 255);
+  background: linear-gradient(29deg, rgba(4, 212, 255, 0.51) 10%, rgba(45, 41, 70, 0) 19%);
 }
 .faq .accordion {
-  --bs-accordion-bg: #111111;
+  --bs-accordion-bg: 000;
+  padding: 20px 50px;
+}
+.faq .accordion .accordion-item {
+  margin-top: 12px;
+  border-color: #04D4FF;
+}
+.faq .accordion .accordion-item:not(:first-of-type) {
+  border-top: var(--bs-accordion-border-width) solid #04D4FF;
 }
 .faq .accordion .accordion-item .accordion-header .accordion-button {
   color: white;
   font-size: 2rem;
+  padding: 20px;
+}
+.faq .accordion .accordion-item .accordion-header .accordion-button::after {
+  width: 10px;
+  height: 10px;
+  margin-left: auto;
+  content: "";
+  transition: var(--bs-accordion-btn-icon-transition);
+  border: solid white;
+  border-width: 1px 1px 0 0;
+  transform: rotate(135deg);
+  background: none;
+}
+.faq .accordion .accordion-item .accordion-header .accordion-button:not(.collapsed)::after {
+  transform: rotate(-45deg);
+}
+.faq .accordion .accordion-item .accordion-body {
+  background: rgba(255, 255, 255, 0.107);
+  padding: 20px;
 }
 .faq .accordion-button:not(.collapsed) {
   background-color: #04D4FF;
