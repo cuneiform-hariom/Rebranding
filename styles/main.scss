@@ -1090,6 +1090,7 @@ header {
         &.in {
             display: flex;
             gap: 60px;
+            flex-wrap: wrap;
         }
     }
 }
@@ -1116,10 +1117,9 @@ header {
 
     // process bar styling 
 
-
     .ps-timeline-sec {
         position: relative;
-        background: #fff;
+        
     }
 
     .ps-timeline-sec .container {

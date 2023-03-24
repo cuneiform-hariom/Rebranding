@@ -883,6 +883,7 @@ header .navbar .nav-links .mega-one:hover .megamenu {
 .pp-service .tab-item.in {
   display: flex;
   gap: 60px;
+  flex-wrap: wrap;
 }
 
 .pp-process {
@@ -901,7 +902,6 @@ header .navbar .nav-links .mega-one:hover .megamenu {
 }
 .pp-process .ps-timeline-sec {
   position: relative;
-  background: #fff;
 }
 .pp-process .ps-timeline-sec .container {
   position: relative;
