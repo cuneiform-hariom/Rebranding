@@ -100,6 +100,10 @@ body {
   font-size: 2rem;
 }
 
+.mobile-serv {
+  display: none;
+}
+
 .mobile-header {
   display: none;
 }
@@ -261,9 +265,15 @@ header .navbar .nav-links .mega-one:hover .megamenu {
 .why-hire .icon-bar .icon-box img {
   width: 64px;
   height: 64px;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
-.why-hire .icon-bar .icon-box p {
-  font-size: 1.8rem;
+.why-hire .icon-bar .icon-box .icon-cont {
+  display: flex;
+  flex-direction: column;
+}
+.why-hire .icon-bar .icon-box .icon-cont p {
+  font-size: 1.5rem;
   font-weight: 400;
 }
 
@@ -421,7 +431,7 @@ header .navbar .nav-links .mega-one:hover .megamenu {
 
 .nav-pills .nav-link {
   display: flex;
-  gap: 10px;
+  gap: 20px;
   align-items: center;
   padding: 30px 10px !important;
   border: 1px solid white !important;
@@ -450,6 +460,7 @@ header .navbar .nav-links .mega-one:hover .megamenu {
   padding: 30px 60px;
   border: 1px solid white;
   border-radius: 10px;
+  background: radial-gradient(circle, rgba(45, 41, 70, 0.71) 0%, rgba(255, 255, 255, 0) 100%);
 }
 .tab-pane .right {
   float: right;
@@ -522,6 +533,9 @@ header .navbar .nav-links .mega-one:hover .megamenu {
 }
 .ind-serv .container .serv-box img {
   width: 66px;
+}
+.ind-serv .container .serv-box p {
+  text-align: center;
 }
 .ind-serv .container .col:nth-child(odd) {
   margin-top: 80px;
@@ -1512,6 +1526,15 @@ header .navbar .nav-links .mega-one:hover .megamenu {
   grid-area: 2/3/3/4;
 }
 
+.martech-banner {
+  background: url(../img/martechbg.jpg);
+  background-size: cover;
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .faq {
   padding: 30px;
   background: rgb(4, 212, 255);
@@ -1588,7 +1611,7 @@ header .navbar .nav-links .mega-one:hover .megamenu {
 }
 @media only screen and (max-width: 771px) {
   html {
-    font-size: 40%;
+    font-size: 60%;
   }
   .mobile-header {
     display: block;
@@ -1634,6 +1657,9 @@ header .navbar .nav-links .mega-one:hover .megamenu {
   }
   .why-hire .icon-bar {
     grid-template-columns: 1fr 1fr;
+  }
+  .why-hire .icon-bar .icon-box {
+    flex-direction: column;
   }
   .all-tech {
     display: block;
@@ -1716,9 +1742,70 @@ header .navbar .nav-links .mega-one:hover .megamenu {
   .ind .serv-box img {
     width: 80px;
   }
+  .ind .serv-box p {
+    text-align: center;
+  }
+  .testimonial .testi-slider-wrap {
+    padding: 0;
+  }
+  .pp-contact .pp-form {
+    padding: 0;
+  }
+  .pp-contact .pp-form .name-feild {
+    grid-template-columns: 1fr;
+  }
+  .pp-contact .pp-form .main-btn {
+    width: 100%;
+    margin: 10px 0;
+  }
+  .pp-contact iframe {
+    height: 300px;
+  }
+  .mobile-serv {
+    display: block;
+    padding: 20px;
+  }
+  .mobile-serv .accordion-item {
+    margin-bottom: 15px;
+  }
+  .mobile-serv .accordion-item:not(:first-of-type) {
+    border: 1px solid white;
+  }
+  .mobile-serv .accordion-item .accordion-header .accordion-button {
+    background: #111111;
+    font-size: 2rem;
+    color: white;
+  }
+  .mobile-serv .accordion-item .accordion-header .accordion-button:not(.collapsed) {
+    background: linear-gradient(59.67deg, rgb(4, 212, 255) -0.89%, rgb(105, 80, 166) 118.08%) !important;
+  }
+  .mobile-serv .accordion-item .accordion-header .accordion-button::after {
+    display: none;
+  }
+  .mobile-serv .accordion-item .accordion-body {
+    background-color: #111111;
+    padding: 20px;
+  }
+  .mobile-serv .accordion-item .accordion-body .serv-title {
+    margin: 25px 0;
+    color: white;
+    font-weight: 600;
+  }
+  .mobile-serv .accordion-item .accordion-body .serv-icon-box {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px 0;
+    gap: 30px;
+  }
+  .mobile-serv .accordion-item .accordion-body .serv-icon-box img {
+    width: 50px;
+  }
+  .service .header {
+    display: none;
+  }
 }
 @media only screen and (max-width: 500px) {
   html {
-    font-size: 35%;
+    font-size: 60.5%;
   }
 }/*# sourceMappingURL=main.css.map */
