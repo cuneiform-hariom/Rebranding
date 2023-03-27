@@ -1526,13 +1526,152 @@ header .navbar .nav-links .mega-one:hover .megamenu {
   grid-area: 2/3/3/4;
 }
 
-.martech-banner {
-  background: url(../img/martechbg.jpg);
+.expand-banner {
+  background: rgba(0, 0, 0, 0.472) url(../img/martechbg.jpg);
   background-size: cover;
-  height: 700px;
+  padding: 200px 0;
+  background-position: center center;
+  background-blend-mode: color;
+}
+.expand-banner .row {
+  align-items: center;
+}
+.expand-banner .row h2 {
+  font-size: 6rem;
+  color: white;
+  font-weight: 700;
+}
+
+.expand-sol {
+  margin: 40px 10px;
+}
+.expand-sol .container {
+  padding: 30px;
+  border: 3px solid white;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.051);
+}
+
+.expand-serv {
+  padding: 20px;
+}
+.expand-serv .grid-3 {
+  gap: 30px;
+  margin-top: 30px;
+}
+.expand-serv .grid-3 .serv-icon-box {
+  padding: 30px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  gap: 15px;
+  border: 2px solid white;
+  border-radius: 10px;
+  background: linear-gradient(rgba(105, 80, 166, 0.17), rgba(0, 211, 255, 0.1));
+}
+.expand-serv .grid-3 .serv-icon-box img {
+  width: 50px;
+}
+
+.expand-tools {
+  margin: 50px 0;
+}
+.expand-tools .tool-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-column-gap: 40px;
+  grid-row-gap: 40px;
+  padding: 0 50px;
+  margin-top: 30px;
+}
+.expand-tools .tool-grid .tool-box-1 {
+  grid-area: 1/1/2/2;
+}
+.expand-tools .tool-grid .div2 {
+  grid-area: 1/2/2/3;
+}
+.expand-tools .tool-grid .tool-box-3 {
+  grid-area: 2/1/3/2;
+}
+.expand-tools .tool-grid .tool-box-4 {
+  grid-area: 2/2/3/3;
+}
+.expand-tools .tool-grid .tool-box-5 {
+  grid-area: 3/1/4/2;
+}
+.expand-tools .tool-grid .tool-box-6 {
+  grid-area: 3/2/4/3;
+}
+.expand-tools .tool-grid .tool-box-7 {
+  grid-area: 4/1/5/3;
+}
+.expand-tools .tool-grid .tool-box {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  border: 2px solid white;
+  border-radius: 10px;
+  background: linear-gradient(rgba(105, 80, 166, 0.17), rgba(0, 211, 255, 0.1));
+  box-shadow: rgb(2, 185, 255) 6px 6px 0;
+}
+
+.expand-why {
+  padding: 30px 50px;
+}
+.expand-why .grid-2 {
+  gap: 40px;
+}
+.expand-why .grid-2 img {
+  box-shadow: rgb(2, 185, 255) 6px 6px 0;
+  border-radius: 10px;
+}
+.expand-why .grid-2 .right-why hr {
+  border-top: 2px solid white;
+}
+.expand-why .grid-2 .right-why .points {
+  padding: 0;
+}
+.expand-why .grid-2 .right-why .points li {
+  margin-top: 10px;
+  display: flex;
+}
+.expand-why .grid-2 .right-why .points li .fa-circle-check {
+  color: transparent;
+  font-size: 2rem;
+  margin-right: 15px;
+  background: linear-gradient(rgb(104, 80, 166), rgb(0, 213, 255));
+  -webkit-background-clip: text;
+}
+.expand-why .grid-2 .right-why .points li span {
+  color: white;
+  font-size: 1.8rem;
+}
+
+.expand-cases {
+  padding: 40px 0;
+  background: rgba(17, 17, 17, 0.8941176471) url(../img/case-bg.jpg);
+  background-size: cover;
+  background-blend-mode: color;
+}
+.expand-cases .case-boxes {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 40px;
+}
+.expand-cases .case-boxes .case-box {
+  display: flex;
+  gap: 40px;
+  background-color: rgba(255, 255, 255, 0.057);
+  padding: 10px 70px;
+  border-radius: 10px;
+  background: #111111;
+}
+.expand-cases .case-boxes .case-box img {
+  width: 60px;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .faq {
@@ -1612,6 +1751,10 @@ header .navbar .nav-links .mega-one:hover .megamenu {
 @media only screen and (max-width: 771px) {
   html {
     font-size: 60%;
+  }
+  .grid-2,
+  .grid-3 {
+    grid-template-columns: 1fr;
   }
   .mobile-header {
     display: block;
@@ -1803,9 +1946,33 @@ header .navbar .nav-links .mega-one:hover .megamenu {
   .service .header {
     display: none;
   }
+  .expand-banner {
+    padding: 20px;
+  }
+  .expand-banner .row h2 {
+    font-size: 25px;
+  }
+  .expand-tools .tool-grid {
+    display: block;
+    padding: 10px;
+  }
+  .expand-tools .tool-grid .tool-box {
+    margin-top: 20px;
+  }
+  .expand-cases .case-boxes .case-box {
+    flex-direction: column;
+    padding: 15px;
+    gap: 10px;
+  }
+  .expand-cases .case-boxes .case-box p {
+    font-size: 15px;
+  }
+  .expand-why {
+    padding: 10px;
+  }
 }
 @media only screen and (max-width: 500px) {
   html {
-    font-size: 60.5%;
+    font-size: 50%;
   }
 }/*# sourceMappingURL=main.css.map */
